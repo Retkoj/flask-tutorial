@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flashcard</title>
+</head>
+<body>
+  <h1> Remove flash card </h1>
+  <p>
+      Question: {{ card.question }} <br>
+      Answer: {{ card.answer }}
+  </p>
+  <h2>Are you sure?</h2>
+  <form method="post">
+    <button type="submit">Yes</button>
+      <button>
+          <a href="{{ url_for('card_view', card=card, index=index) }}">No</a>
+      </button>
+  </form>
+</body>
+</html>

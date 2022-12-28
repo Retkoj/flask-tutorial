@@ -16,7 +16,9 @@
         {% endfor %}
     </ul>
     <p>
-        <a href="{{ url_for('card_view', index=0) }}">Go to cards</a>
+        <button>
+            <a href="{{ url_for('add_card') }}">Add a new card</a>
+        </button>
     </p>
 </body>
 </html>

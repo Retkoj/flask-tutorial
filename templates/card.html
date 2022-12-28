@@ -11,7 +11,20 @@
       Answer: {{ card.answer }}
   </p>
   <p>
-      <a href="{{ url_for('welcome') }}">Home</a>
+      <button>
+        <a href="{{ url_for('welcome') }}">Home</a>
+      </button>
+      <button>
+          {% if index > 0 %}
+          <a href="{{ url_for('card_view', index=index - 1) }}">
+              Previous card
+          </a>
+          {% else %}
+          <a href="{{ url_for('card_view', index=max_index) }}">
+              Previous card
+          </a>
+          {% endif %}
+      </button>
       <button>
           {% if index < max_index %}
           <a href="{{ url_for('card_view', index=index + 1) }}">
@@ -22,6 +35,11 @@
               Next card
           </a>
           {% endif %}
+      </button>
+      <button>
+          <a href="{{ url_for('remove_card', card=card, index=index) }}">
+            Remove card
+          </a>
       </button>
   </p>
 </body>
