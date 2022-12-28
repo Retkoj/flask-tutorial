@@ -1,0 +1,22 @@
+[
+  {
+    "question":"Hello",
+    "answer": "Hallo"
+  },
+  {
+    "question":"Goodbye",
+    "answer": "Doei"
+  },
+  {
+    "question":"How are you?",
+    "answer": "Hoe gaat het?"
+  },
+  {
+    "question":"What time is it?",
+    "answer": "Hoe laat is het?"
+  },
+  {
+    "question":"What day is it?",
+    "answer": "Welke dag is het?"
+  }
+]
