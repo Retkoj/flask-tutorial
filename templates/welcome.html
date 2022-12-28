@@ -5,13 +5,18 @@
     <title>Welcome</title>
 </head>
 <body>
-    <h1>Welcome</h1>
+    <h1>Flashcards</h1>
+    <ul>
+        {% for card in cards %}
+        <li>
+            <a href="{{ url_for('card_view', index=loop.index0) }}">
+                {{ card.question }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
     <p>
-        Demo with some text
-        <em>Getting started</em>
-    </p>
-    <p>
-        {{message}}
+        <a href="{{ url_for('card_view', index=0) }}">Go to cards</a>
     </p>
 </body>
 </html>
