@@ -1,4 +1,8 @@
-# Flask tutorial
+# Flask tutorial: Flash Cards site
+
+Created following the 'Flask: getting started' tutorial on PluralSight.
+
+Site where Flash Cards with English questions and Dutch answers can be viewed, created and removed.
 
 ## Run
 Set (or `export` in unix systems) `FLASK_APP` to the python file containing the flask app:   

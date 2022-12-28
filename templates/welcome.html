@@ -3,7 +3,13 @@
 {% block title %}Welcome{% endblock %}
 
 {% block content %}
-    <h1>Flashcards</h1>
+    <h1>Welcome</h1>
+    <p>
+        Simple site to create and practice English-Dutch phrases using flashcards. <br>
+        Created using the 'Flask: Getting started' tutorial on PluralSight. <br>
+        Click on a flashcard below to start, or create a new card by clicking the 'Add a new card' button at the bottom.
+    </p>
+    <h2>Flashcards</h2>
     <ul>
         {% for card in cards %}
         <li>

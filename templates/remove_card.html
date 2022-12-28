@@ -3,12 +3,12 @@
 {% block title%}Remove card{% endblock %}
 
 {% block content %}
-  <h1> Remove flash card </h1>
+  <h1>Remove flash card</h1>
   <p>
       Question: {{ card.question }} <br>
       Answer: {{ card.answer }}
   </p>
-  <h2>Are you sure?</h2>
+  <h2>Are you sure you want to remove this card?</h2>
   <form method="post">
     <button type="submit">Yes</button>
       <button>
