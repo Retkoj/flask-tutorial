@@ -16,18 +16,22 @@ def welcome():
                            cards=db_handler.get_db())
 
 
-@app.route("/card/<int:index>")
+@app.route("/card/<int:index>", methods=["GET", "POST"])
 def card_view(index):
     """
     Retrieve a card by index and use it to render the card page. Also
     passes current index and max list index to the template.
     If index not found, returns a 404.
     """
+    show_card = False
+    if request.method == "POST":
+        show_card = True
     try:
         card = db_handler.get_card_by_index(index)
         return render_template("card.html",
                                card=card,
                                index=index,
+                               show_card=show_card,
                                max_index=len(db_handler.get_db()) - 1)
     except IndexError:
         abort(404)

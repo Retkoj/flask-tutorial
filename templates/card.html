@@ -6,8 +6,16 @@
   <h1> Card </h1>
   <p>
       Question: {{ card.question }} <br>
-      Answer: {{ card.answer }}
   </p>
+    {% if show_card %}
+    <p>
+        Answer: {{ card.answer }}
+    </p>
+    {% else %}
+    <form method="post">
+        <button type="submit">Show answer</button>
+    </form>
+    {% endif %}
   <p>
       <button>
         <a href="{{ url_for('welcome') }}">Home</a>
