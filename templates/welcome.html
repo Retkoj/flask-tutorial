@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
     <h1>Flashcards</h1>
     <ul>
         {% for card in cards %}
@@ -20,5 +18,4 @@
             <a href="{{ url_for('add_card') }}">Add a new card</a>
         </button>
     </p>
-</body>
-</html>
+{% endblock %}
